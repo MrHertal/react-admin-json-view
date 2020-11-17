@@ -15,7 +15,7 @@
     "test": "jest --coverage"
   },
   "author": "Grégoire Hertault",
-  "license": "ISC",
+  "license": "MIT",
   "files": [
     "build"
   ],
