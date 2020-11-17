@@ -3,6 +3,14 @@
 JSON field and input for [react-admin](https://github.com/marmelab/react-admin).
 Built with [react-json-view](https://github.com/mac-s-g/react-json-view).
 
+Field:
+
+![JSON show](docs/images/json-show.png)
+
+Input:
+
+![JSON edit](docs/images/json-edit.png)
+
 ## Installation
 
 ```sh
