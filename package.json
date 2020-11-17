@@ -1,6 +1,6 @@
 {
   "name": "react-admin-json-view",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "JSON field and input for react-admin.",
   "repository": {
     "type": "git",

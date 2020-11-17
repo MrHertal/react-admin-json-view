@@ -21,6 +21,7 @@ export const ExampleShow = (props) => (
     <SimpleShowLayout>
       <JsonField
         source="example"
+        addLabel={true}
         reactJsonOptions={{
           // Props passed to react-json-view
           name: null,
