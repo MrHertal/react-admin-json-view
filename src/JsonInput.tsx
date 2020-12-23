@@ -1,6 +1,6 @@
 import { FormHelperText } from "@material-ui/core";
 import React from "react";
-import { InputHelperText, Labeled, useInput } from "react-admin";
+import { InputHelperText, InputProps, Labeled, useInput } from "react-admin";
 import ReactJson, {
   InteractionProps,
   ReactJsonViewProps,
@@ -10,7 +10,7 @@ type Props = {
   source: string;
   helperText?: string;
   reactJsonOptions?: ReactJsonViewProps;
-};
+} & InputProps;
 
 export const JsonInput: React.FC<Props> = (props) => {
   const {
@@ -58,7 +58,7 @@ export const JsonInput: React.FC<Props> = (props) => {
       </Labeled>
       <FormHelperText error={!!(touched && error)}>
         <InputHelperText
-          touched={touched}
+          touched={!!touched}
           error={error}
           helperText={helperText}
         />
