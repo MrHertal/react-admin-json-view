@@ -1,3 +1,4 @@
+import get from "lodash/get";
 import React from "react";
 import { FieldProps } from "react-admin";
 import ReactJson, { ReactJsonViewProps } from "react-json-view";
@@ -13,5 +14,7 @@ export const JsonField: React.FC<Props> = ({
   record = {},
   reactJsonOptions = {},
 }) => {
-  return <ReactJson {...reactJsonOptions} src={record[source] || {}} />;
+  const value = get(record, source);
+
+  return <ReactJson {...reactJsonOptions} src={value || {}} />;
 };
