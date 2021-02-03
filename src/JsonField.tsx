@@ -6,15 +6,21 @@ import ReactJson, { ReactJsonViewProps } from "react-json-view";
 type Props = {
   source: string;
   record?: any;
+  jsonString?: boolean;
   reactJsonOptions?: ReactJsonViewProps;
 } & FieldProps;
 
 export const JsonField: React.FC<Props> = ({
   source,
   record = {},
+  jsonString = false,
   reactJsonOptions = {},
 }) => {
-  const value = get(record, source);
+  let src = get(record, source);
 
-  return <ReactJson {...reactJsonOptions} src={value || {}} />;
+  if (jsonString) {
+    src = JSON.parse(src);
+  }
+
+  return <ReactJson {...reactJsonOptions} src={src || {}} />;
 };

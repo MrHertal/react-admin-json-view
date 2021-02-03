@@ -30,6 +30,7 @@ export const ExampleShow = (props) => (
       <JsonField
         source="example"
         addLabel={true}
+        jsonString={false} // Set to true if the value is a string, default: false
         reactJsonOptions={{
           // Props passed to react-json-view
           name: null,
@@ -48,6 +49,7 @@ export const ExampleEdit = (props) => (
       <JsonInput
         source="example"
         validate={[required()]}
+        jsonString={false} // Set to true if the value is a string, default: false
         reactJsonOptions={{
           // Props passed to react-json-view
           name: null,
