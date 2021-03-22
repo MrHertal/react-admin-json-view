@@ -7,7 +7,7 @@ type Props = {
   source: string;
   record?: any;
   jsonString?: boolean;
-  reactJsonOptions?: ReactJsonViewProps;
+  reactJsonOptions?: Omit<ReactJsonViewProps, "src">;
 } & FieldProps;
 
 export const JsonField: React.FC<Props> = ({
