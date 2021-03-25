@@ -10,7 +10,7 @@ type Props = {
   source: string;
   helperText?: string;
   jsonString?: boolean;
-  reactJsonOptions?: ReactJsonViewProps;
+  reactJsonOptions?: Omit<ReactJsonViewProps, "src">;
 } & InputProps;
 
 export const JsonInput: React.FC<Props> = (props) => {
