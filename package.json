@@ -1,6 +1,6 @@
 {
   "name": "react-admin-json-view",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "description": "JSON field and input for react-admin.",
   "repository": {
     "type": "git",
@@ -56,6 +56,6 @@
     "react-dom": "*"
   },
   "dependencies": {
-    "react-json-view": "^1.20.4"
+    "react-json-view": "^1.21.3"
   }
 }
