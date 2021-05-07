@@ -8,7 +8,7 @@ import ReactJson, {
 
 type Props = {
   source: string;
-  label: string;
+  label?: string;
   helperText?: string;
   jsonString?: boolean;
   reactJsonOptions?: Omit<ReactJsonViewProps, "src">;
@@ -21,7 +21,13 @@ export const JsonInput: React.FC<Props> = (props) => {
     isRequired,
   } = useInput(props);
 
-  const { source, label, helperText, jsonString = false, reactJsonOptions } = props;
+  const {
+    source,
+    label,
+    helperText,
+    jsonString = false,
+    reactJsonOptions,
+  } = props;
 
   function change(updatedSrc: any) {
     let updatedValue = updatedSrc;
