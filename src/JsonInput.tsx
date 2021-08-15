@@ -78,9 +78,9 @@ export const JsonInput: React.FC<Props> = (props) => {
         <ReactJson
           {...reactJsonOptions}
           src={src || {}}
-          onEdit={onEdit}
-          onAdd={onAdd}
-          onDelete={onDelete}
+          onEdit={reactJsonOptions?.onEdit === false ? false : onEdit}
+          onAdd={reactJsonOptions?.onAdd === false ? false : onAdd}
+          onDelete={reactJsonOptions?.onDelete === false ? false : onDelete}
         />
       </Labeled>
       <FormHelperText error={!!(touched && error)}>
