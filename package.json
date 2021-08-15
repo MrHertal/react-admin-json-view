@@ -1,6 +1,6 @@
 {
   "name": "react-admin-json-view",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "JSON field and input for react-admin.",
   "repository": {
     "type": "git",
@@ -11,8 +11,7 @@
   "jsnext:main": "build/index.es.js",
   "scripts": {
     "build": "rollup -c",
-    "lint": "eslint .",
-    "test": "jest --coverage"
+    "lint": "eslint ."
   },
   "author": "Grégoire Hertault",
   "license": "MIT",
