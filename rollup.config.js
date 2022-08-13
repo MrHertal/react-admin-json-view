@@ -36,4 +36,5 @@ export default {
       include: ["node_modules/**"],
     }),
   ],
+  external: ["@mui/material"],
 };
