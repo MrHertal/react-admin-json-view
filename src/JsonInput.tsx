@@ -1,4 +1,4 @@
-import { FormHelperText } from "@material-ui/core";
+import { FormHelperText } from "@mui/material";
 import React from "react";
 import { InputHelperText, InputProps, Labeled, useInput } from "react-admin";
 import ReactJson, {
@@ -16,8 +16,9 @@ type Props = {
 
 export const JsonInput: React.FC<Props> = (props) => {
   const {
-    input: { value, onChange },
-    meta: { touched, error },
+    field: { value, onChange },
+    fieldState: { isTouched, error },
+    formState: { isSubmitted },
     isRequired,
   } = useInput(props);
 
@@ -83,10 +84,10 @@ export const JsonInput: React.FC<Props> = (props) => {
           onDelete={reactJsonOptions?.onDelete === false ? false : onDelete}
         />
       </Labeled>
-      <FormHelperText error={!!(touched && error)}>
+      <FormHelperText error={(isTouched || isSubmitted) && !!error}>
         <InputHelperText
-          touched={!!touched}
-          error={error}
+          touched={isTouched || isSubmitted}
+          error={error?.message}
           helperText={helperText}
         />
       </FormHelperText>
