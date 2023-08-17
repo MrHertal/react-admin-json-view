@@ -1,6 +1,7 @@
 import React from "react";
 import { FieldProps, useRecordContext } from "react-admin";
 import ReactJson, { ReactJsonViewProps } from "react-json-view";
+import { get } from "lodash";
 
 type Props = {
   source: string;
@@ -15,7 +16,7 @@ export const JsonField: React.FC<Props> = ({
 }) => {
   const record = useRecordContext();
 
-  let src = record[source];
+  let src = get(record, source);
 
   if (jsonString) {
     src = JSON.parse(src);
