@@ -54,6 +54,6 @@
     "react-dom": "*"
   },
   "dependencies": {
-    "react-json-view": "^1.21.3"
+    "@microlink/react-json-view": "^1.22.2"
   }
 }
